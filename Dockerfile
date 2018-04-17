@@ -6,6 +6,7 @@ ARG KUBECTL_VERSION=v1.10.0
 RUN apk add --no-cache \
       ca-certificates \
       curl \
+      bash \
   && curl -sSL \
       "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl" \
       -o /usr/local/bin/kubectl\
